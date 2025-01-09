@@ -45,8 +45,10 @@
     background-color: transparent;
     cursor: pointer;
     margin-top: 100px;
+    
 }
 
 #prev-button {
     transform: rotate(180deg);
+    margin-top: 160px;
 }

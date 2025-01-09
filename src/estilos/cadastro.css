@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #32b7cb;
+}
+
+.container {
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,.212);
+}
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 19rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+.form header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.login-button{
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+.login-button button {
+    border: none;
+    background-color: rgb(111, 94, 219);
+    padding: 0.2rem 0.3rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.login-button button:hover {
+    background-color: orange;
+}
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+}
+.possui-conta{
+    margin-top: 0.5rem;
+}
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.1rem;
+}
+.input-box input {
+    margin: 0.2rem 0;
+    padding: 0.4rem 0.4rem;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #0000001c;
+}
+.input-box input:hover{
+    background-color:rgb(231, 229, 114);
+}
+.input-box input:focus-visible{
+    outline: 1px solid;
+}
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color:#000000c0;
+}
+.input-box input::placeholder{
+    color: #000000be;
+}
+.gender-group{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 0.1rem;
+    padding: 0 0.1rem;
+}
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+.gender-input input{
+    margin-right: 0.1rem;
+}
+.gender-input label{
+    font-size:0.6rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.continue-button button {
+    width: 100%;
+    margin-top: 0.5rem;
+    border: none;
+    background-color: rgb(111, 94, 219);
+    padding: 0.62rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.continue-button button:hover{
+    background-color: orange;
+}
+.continue-button button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+}
+@media screen and (max-width: 1060px){
+    .form-image{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
