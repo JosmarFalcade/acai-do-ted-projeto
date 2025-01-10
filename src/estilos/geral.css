@@ -1,0 +1,25 @@
+img {
+    /* Impede a seleção do usuário */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    /* Impede o arrastar no Safari e Chrome */
+    -webkit-user-drag: none;
+    /* Impede o arrastar no Konqueror */
+    -khtml-user-drag: none;
+    /* Impede o arrastar no Firefox */
+    -moz-user-drag: none;
+    /* Impede o arrastar no Opera */
+    -o-user-drag: none;
+}
+@media screen and (max-width: 1060px){
+    .form-image{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
