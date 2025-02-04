@@ -29,18 +29,19 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgb(111, 94, 219);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    
 }
 
 .navbar .menu {
     display: none;
     flex-direction: column;
-    background-color: #444;
+    background-color:  rgb(111, 94, 219);
     position: absolute;
     top: 50px;
     left: 0;
@@ -64,4 +65,69 @@ img {
     cursor: pointer;
     font-size: 24px;
     color: white;
+}
+/* Botão Flutuante do Carrinho */
+.btn-carrinho {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5A189A;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-carrinho:hover {
+    background-color: #7B2CBF;
+    transform: scale(1.1);
+}
+/* Estilizando a barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 25px;
+    position: relative;
+    max-width: 300px; /* Limitando a largura para não ultrapassar a tela */
+    width: 100%; /* Garante que ela se ajuste automaticamente */
+    margin-right: 50px !important; /* Ajuste este valor conforme necessário */
+}
+
+/* Ajustando o campo de input */
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    width: 150px;
+    height: 100%;
+}
+
+/* Ajustando o botão da lupa */
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    right: 5px; /* Alinha melhor à direita */
+    top: 50%;
+    transform: translateY(-105%); /* Centraliza verticalmente */
 }
