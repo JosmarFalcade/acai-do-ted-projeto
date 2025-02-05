@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de Pagamento</title>
+  
+</head>
+<body>
+    <div class="container">
+        <h1>Formas de Pagamento</h1>
+        <div class="pagamentos">
+            <button class="pagamento" onclick="selecionarPagamento('Dinheiro')">Dinheiro</button>
+            <button class="pagamento" onclick="selecionarPagamento('Cartão de Crédito')">Cartão de Crédito</button>
+            <button class="pagamento" onclick="selecionarPagamento('Cartão de Débito')">Cartão de Débito</button>
+            <button class="pagamento" onclick="selecionarPagamento('PIX')">PIX</button>
+            <button class="pagamento" onclick="selecionarPagamento('Vale Refeição')">Vale Refeição</button>
+        </div>
+        <h2>Parcelamento</h2>
+        <select id="parcelamento" class="parcelamento" disabled>
+            <option value="1">1x sem juros</option>
+            <option value="2">2x sem juros</option>
+            <option value="3">3x sem juros</option>
+        </select>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f4e1;
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #8a2be2;
+}
+.pagamentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+.pagamento {
+    background: #8a2be2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+}
+.parcelamento {
+    margin-top: 20px;
+}
