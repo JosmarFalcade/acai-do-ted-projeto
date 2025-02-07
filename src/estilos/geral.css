@@ -129,5 +129,5 @@ img {
     position: absolute;
     right: 5px; /* Alinha melhor à direita */
     top: 50%;
-    transform: translateY(-105%); /* Centraliza verticalmente */
+    transform: translateY(-55%); /* Centraliza verticalmente */
 }

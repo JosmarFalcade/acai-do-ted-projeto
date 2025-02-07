@@ -6,23 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolha seu Açaí</title>
-    <link rel="stylesheet" href="./src/estilos/produtos.css">
-    <link rel="stylesheet" href="./src/estilos/geral.css">
+    <link rel="stylesheet" href="../estilos/produtos.css">
+    <link rel="stylesheet" href="../estilos/geral.css">
 </head>
 
 <body>
+    <header>
     <!-- Botão Flutuante do Carrinho -->
-    <a href="carrinho.html" class="btn-carrinho">
+    <a href="formapagamento.html" class="btn-carrinho">
         🛒
     </a>
 
     <div class="navbar">
         <span class="menu-toggle">☰</span>
         <div class="menu">
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
+                <a href="../index.html">Inicio</a>
+                <a href="meusdados.html">Meus dados</a>
+                <a href="login.html">Login</a>
+                <a href="cadastro.html">Cadastrar</a>
+                <a href="formapagamento.html">Pagamento</a>
         </div>
         
         <!-- Barra de Pesquisa -->
@@ -31,6 +33,7 @@
             <button onclick="filtrarProdutos()">🔍</button>
         </div>
     </div>
+    </header>
     
 
     <div class="container">
@@ -83,7 +86,7 @@
                 <input type="checkbox" name="acompanhamento" value="chocolate"> Chocolate
             </label>
             <label>
-                <img src="./public/img/nutella.png" alt="Nutella" class="opcao-img">
+                <img src="../img/nutella.png" alt="Nutella" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="nutella"> Nutella
             </label>
             <label>
@@ -119,7 +122,8 @@
         }
     </script>
 
-    <script src="menu.js"></script>
+    <script src="../script/menu.js"></script>
+    <script src="../script/produtos.js"></script>
 </body>
 
 </html>

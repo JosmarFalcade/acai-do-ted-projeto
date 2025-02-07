@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/estilos/login.css">
-    <link rel="stylesheet" href="./src/estilos/geral.css">
+    <link rel="stylesheet" href="../estilos/login.css">
+    <link rel="stylesheet" href="../estilos/geral.css">
     <title>Login</title>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <span class="menu-toggle">☰</span>
+            <div class="menu">
+                <a href="../index.html">Inicio</a>
+                <a href="meusdados.html">Meus dados</a>
+                <a href="cadastro.html">Cadastrar</a>
+                <a href="produtos.html">Escolha o seu açaí</a>
+            </div>
+            
+            <!-- Barra de Pesquisa -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pesquisar..." onkeyup="filtrarProdutos()">
+                <button onclick="filtrarProdutos()">🔍</button>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="form-image">
-            <img src="./public/img/Ursodologin.jpg" alt="">
+            <img src="../img/Ursodologin.jpg" alt="">
         </div>
         <div class="form">
             <form action="#">
@@ -30,15 +47,16 @@
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">Login</a></button>
+                        <button><a href="produtos.html">Login</a></button>
                     </div>
                 </div>
                 <div class="cadastro-button">
                     <h6>Ainda não possui conta, clique aqui</h6>
-                    <button><a href="#">Cadastrar</a></button>
+                    <button><a href="cadastro.html">Cadastrar</a></button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="../Script/menu.js"></script>
 </body>
 </html>
