@@ -1,17 +1,13 @@
-img {
-    /* Impede a seleção do usuário */
+img { 
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    /* Impede o arrastar no Safari e Chrome */
     -webkit-user-drag: none;
-    /* Impede o arrastar no Konqueror */
     -khtml-user-drag: none;
-    /* Impede o arrastar no Firefox */
     -moz-user-drag: none;
-    /* Impede o arrastar no Opera */
     -o-user-drag: none;
 }
+
 @media screen and (max-width: 1060px){
     .form-image{
         display: none;
@@ -23,7 +19,7 @@ img {
         width: 100%;
     }
 }
-/* Estilo do menu */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -35,7 +31,6 @@ img {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    
 }
 
 .navbar .menu {
@@ -66,7 +61,7 @@ img {
     font-size: 24px;
     color: white;
 }
-/* Botão Flutuante do Carrinho */
+
 .btn-carrinho {
     position: fixed;
     bottom: 20px;
@@ -89,7 +84,7 @@ img {
     background-color: #7B2CBF;
     transform: scale(1.1);
 }
-/* Estilizando a barra de pesquisa */
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -99,12 +94,11 @@ img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     height: 25px;
     position: relative;
-    max-width: 300px; /* Limitando a largura para não ultrapassar a tela */
-    width: 100%; /* Garante que ela se ajuste automaticamente */
-    margin-right: 50px !important; /* Ajuste este valor conforme necessário */
+    max-width: 300px;
+    width: 100%;
+    margin-right: 50px !important;
 }
 
-/* Ajustando o campo de input */
 .search-bar input {
     border: none;
     outline: none;
@@ -115,7 +109,6 @@ img {
     height: 100%;
 }
 
-/* Ajustando o botão da lupa */
 .search-bar button {
     background: none;
     border: none;
@@ -127,7 +120,32 @@ img {
     justify-content: center;
     height: 100%;
     position: absolute;
-    right: 5px; /* Alinha melhor à direita */
+    right: 5px;
     top: 50%;
-    transform: translateY(-55%); /* Centraliza verticalmente */
+    transform: translateY(-55%);
 }
+/* Adicione ao seu arquivo CSS */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex-grow: 1; /* Isso faz com que o conteúdo ocupe o máximo de espaço possível */
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #32b7cb;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+

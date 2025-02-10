@@ -42,15 +42,15 @@
         <h2>Escolha o tamanho do copo:</h2>
         <div class="tamanhos">
             <label>
-                <img src="./public/img/copopequeno.png" alt="Pequeno" class="opcao-img">
+                <img src="../img/copopequeno.png" alt="Pequeno" class="opcao-img">
                 <input type="radio" name="tamanho" value="pequeno"> Pequeno (300ml)
             </label>
             <label>
-                <img src="./public/img/copomedio.png" alt="Médio" class="opcao-img">
+                <img src="../img/copomedio.png" alt="Médio" class="opcao-img">
                 <input type="radio" name="tamanho" value="medio"> Médio (500ml)
             </label>
             <label>
-                <img src="./public/img/copogrande.png" alt="Grande" class="opcao-img">
+                <img src="../img/copogrande.png" alt="Grande" class="opcao-img">
                 <input type="radio" name="tamanho" value="grande"> Grande (700ml)
             </label>
         </div>
@@ -58,31 +58,31 @@
         <h2>Escolha seus acompanhamentos:</h2>
         <div class="acompanhamentos">
             <label>
-                <img src="./public/img/granola.png" alt="Granola" class="opcao-img">
+                <img src="../img/granola.png" alt="Granola" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="granola"> Granola
             </label>
             <label>
-                <img src="./public/img/banana.png" alt="Banana" class="opcao-img">
+                <img src="../img/banana.png" alt="Banana" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="banana"> Banana
             </label>
             <label>
-                <img src="./public/img/morangos.png" alt="Morangos" class="opcao-img">
+                <img src="../img/morangos.png" alt="Morangos" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="morangos"> Morangos
             </label>
             <label>
-                <img src="./public/img/leite_condensado.png" alt="Leite Condensado" class="opcao-img">
+                <img src="../img/leite_condensado.png" alt="Leite Condensado" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="leite_condensado"> Leite Condensado
             </label>
             <label>
-                <img src="./public/img/mel.png" alt="Mel" class="opcao-img">
+                <img src="../img/mel.png" alt="Mel" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="mel"> Mel
             </label>
             <label>
-                <img src="./public/img/paçoca.png" alt="Paçoca" class="opcao-img">
+                <img src="../img/paçoca.png" alt="Paçoca" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="paçoca"> Paçoca
             </label>
             <label>
-                <img src="./public/img/chocolate.png" alt="Chocolate" class="opcao-img">
+                <img src="../img/chocolate.png" alt="Chocolate" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="chocolate"> Chocolate
             </label>
             <label>
@@ -90,11 +90,11 @@
                 <input type="checkbox" name="acompanhamento" value="nutella"> Nutella
             </label>
             <label>
-                <img src="./public/img/coco_ralado.png" alt="Coco Ralado" class="opcao-img">
+                <img src="../img/coco_ralado.png" alt="Coco Ralado" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="coco_ralado"> Coco Ralado
             </label>
             <label>
-                <img src="./public/img/castanha.png" alt="Castanha" class="opcao-img">
+                <img src="../img/castanha.png" alt="Castanha" class="opcao-img">
                 <input type="checkbox" name="acompanhamento" value="castanha"> Castanha
             </label>
         </div>
@@ -118,12 +118,24 @@
             }
 
             alert("Redirecionando para o pagamento...");
-            window.location.href = "pagamento.html";
+            window.location.href = "formapagamento.html";
         }
     </script>
 
     <script src="../script/menu.js"></script>
     <script src="../script/produtos.js"></script>
 </body>
-
+<footer>
+    <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
+    <p>Endereço: Rua Jubirasca, 777</p>
+    <p>Telefone: 51 3598 1488</p>
+    <div>
+        <a href="https://instagram.com/sualoja" target="_blank" style="margin: 0 10px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+        </a>
+        <a href="https://wa.me/seunumerodetelefone" target="_blank" style="margin: 0 10px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+        </a>
+    </div>
+</footer>
 </html>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f4e1;
+    background-color: #32b7cb;
     text-align: center;
     padding: 20px;
 }
@@ -11,6 +11,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1 {
     color: #8a2be2;
@@ -31,5 +34,21 @@ h1 {
     cursor: pointer;
 }
 .parcelamento {
+    margin-top: 20px;
+}
+#pagar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end; /* Este estilo posiciona o botão à direita */
+}
+#mensagem {
+    display: none;
+    color: green;
+    font-size: 18px;
     margin-top: 20px;
 }
