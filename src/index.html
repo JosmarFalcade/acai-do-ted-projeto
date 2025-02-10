@@ -1,4 +1,4 @@
-adicione um botao de login e um botao cadastrar na parte superior dessa pagina abaixo da barra de pesquisa dentro do body <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,107 +7,6 @@ adicione um botao de login e um botao cadastrar na parte superior dessa pagina a
     <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/geral.css">
     <title>Principal</title>
-   <style>
-    * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #32b7cb;
-}
-.slider{
-    margin: 0 auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
-}
-.slides{
-    width: 400%;
-    height: 400px;
-    display: flex;
-}
-.slides input{
-    display: none;
-}
-.slide{
-    width: 25%;
-    position: relative;
-    transition: 2s;
-}
-.slide img{
-    width: 1080px;
-    height: 1080px;
-    justify-items: auto;
-}
-.manual-navigation{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn{
-    border: 2px solid orange;
-    padding: 5px;
-    border-radius: 10px;
-    cursor:pointer;
-    transition: 1s;
-}
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-.manual-btn:hover{
-    background-color: orange;
-}
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
-.navigation-auto div{
-    border: 2px solid #20a6ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.navigation-auto {
-    position: absolute;
-    width: 800px;
-    margin-top: 360px;
-    display: flex;
-    justify-content: center;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: orange;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: orange;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: orange;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: orange;
-}
-</style>
     
 </head>
 <body>
@@ -127,6 +26,13 @@ body {
                 <button onclick="filtrarProdutos()">🔍</button>
             </div>
         </header>
+        
+        <!-- Botões de Login e Cadastrar -->
+        <div class="auth-buttons">
+            <button onclick="window.location.href='Pages/login.html'">Login</button>
+            <button onclick="window.location.href='Pages/cadastro.html'">Cadastrar</button>
+        </div>
+        
     <div class=slider>
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
@@ -162,22 +68,6 @@ body {
     </div>
     <script src="script/script.js"></script>
     <script src="script/menu.js"></script>
-    <script>
-    let count = 1;
-document.getElementById("radio1").checked = true;
-
-setInterval( function(){
-    nextImage();
-},5000)
-
-function nextImage(){
-    count++;
-    if(count>4){
-        count = 1;
-    }
-    document.getElementById("radio"+count).checked = true;
-</script>
-}
 </body>
 <footer>
     <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
@@ -190,6 +80,8 @@ function nextImage(){
         <a href="https://wa.me/seunumerodetelefone" target="_blank" style="margin: 0 10px;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
         </a>
+        <img src="img/Açai TED.png" alt="Logo" class="footer-image">
     </div>
 </footer>
+
 </html>
