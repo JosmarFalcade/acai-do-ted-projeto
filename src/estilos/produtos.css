@@ -105,27 +105,6 @@ button:hover {
     background-color: #7B2CBF;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .tamanhos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .acompanhamentos {
-        gap: 10px;
-    }
-
-    .opcao-img {
-        width: 80px;
-        height: 80px;
-    }
-}
 .navbar {
     position: fixed;
     top: 0;

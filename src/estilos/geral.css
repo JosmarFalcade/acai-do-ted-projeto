@@ -8,36 +8,6 @@ img {
     -o-user-drag: none;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .menu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    .menu.active {
-        display: flex;
-    }
-    
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .form-image img {
-        width: 80%;
-        margin: auto;
-    }
-}
 
 
 /* Adicione ao seu arquivo CSS */
@@ -54,13 +24,13 @@ html, body {
 
 footer {
     width: 100%;
-    position: relative;
+    position:absolute;
     bottom: 0;
     left: 0;
-    background-color: #32b7cb;
+    background-color: rgb(111, 94, 219);
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 .footer-image {
     position: absolute;
@@ -68,6 +38,47 @@ footer {
     bottom: 10px; /* Ajuste a distância da parte inferior */
     width: 100px; /* Ajuste o tamanho da imagem */
     height: auto;
+}
+@media (max-width: 1024px) {
+    .slider {
+        width: 100%;
+    }
+    .manual-navigation, .navigation-auto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .slider {
+        height: auto;
+    }
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .manual-btn {
+        padding: 3px;
+        margin-right: 20px;
+    }
+    .search-bar {
+        max-width: 200px;
+    }
 }
 
 

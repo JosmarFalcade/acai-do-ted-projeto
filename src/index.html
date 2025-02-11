@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/geral.css">
     <title>Principal</title>
-    
+ 
 </head>
+
 <body>
     <header>
         <div class="navbar">
@@ -19,69 +21,72 @@
                 <a href="Pages/cadastro.html">Cadastrar</a>
                 <a href="Pages/produtos.html">Escolha o seu açaí</a>
             </div>
-            
+
             <!-- Barra de Pesquisa -->
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Pesquisar..." onkeyup="filtrarProdutos()">
                 <button onclick="filtrarProdutos()">🔍</button>
             </div>
-        </header>
-        
+    </header>
+    <main>
         <!-- Botões de Login e Cadastrar -->
         <div class="auth-buttons">
             <button onclick="window.location.href='Pages/login.html'">Login</button>
             <button onclick="window.location.href='Pages/cadastro.html'">Cadastrar</button>
         </div>
-        
-    <div class=slider>
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
 
-            <div class="slide first">
-                <img src="img/historia1.png" alt="Imagem 1" />
+        <div class=slider>
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <img src="img/historia1.png" alt="Imagem 1" />
+                </div>
+                <div class="slide">
+                    <img src="img/historia2.png" alt="Imagem 2" />
+                </div>
+                <div class="slide">
+                    <img src="img/historia3.png" alt="Imagem 3" />
+                </div>
+                <div class="slide">
+                    <img src="img/historia4.png" alt="Imagem 4" />
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
             </div>
-            <div class ="slide">
-                <img src="img/historia2.png" alt="Imagem 2"/>
-            </div>
-            <div class ="slide">
-                <img src="img/historia3.png" alt="Imagem 3"/>
-            </div>
-            <div class ="slide">
-                <img src="img/historia4.png" alt="Imagem 4"/>
-            </div>
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
             </div>
         </div>
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+        <script src="script/script.js"></script>
+        <script src="script/menu.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
+        <p>Endereço: Rua Jubirasca, 777</p>
+        <p>Telefone: 51 3598 1488</p>
+        <div>
+            <a href="https://instagram.com/sualoja" target="_blank" style="margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                    width="30">
+            </a>
+            <a href="https://wa.me/seunumerodetelefone" target="_blank" style="margin: 0 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+            </a>
+            <img src="img/Açai TED.png" alt="Logo" class="footer-image">
         </div>
-    </div>
-    <script src="script/script.js"></script>
-    <script src="script/menu.js"></script>
+    </footer>
+
 </body>
-<footer>
-    <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
-    <p>Endereço: Rua Jubirasca, 777</p>
-    <p>Telefone: 51 3598 1488</p>
-    <div>
-        <a href="https://instagram.com/sualoja" target="_blank" style="margin: 0 10px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
-        </a>
-        <a href="https://wa.me/seunumerodetelefone" target="_blank" style="margin: 0 10px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
-        </a>
-        <img src="img/Açai TED.png" alt="Logo" class="footer-image">
-    </div>
-</footer>
 
 </html>
