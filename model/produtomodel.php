@@ -1,6 +1,6 @@
 <?php
-class clientemodel {
-    private $idcliente;
+class produtomodel {
+    private $idproduto;
     private $pnome;
     private $snome;
     private $email;
@@ -8,8 +8,8 @@ class clientemodel {
     private $genero;
 
     // Construtor
-    public function __construct($idcliente, $pnome, $snome, $email, $senha, $genero) {
-        $this->idcliente = $idcliente;
+    public function __construct($idproduto, $pnome, $snome, $email, $senha, $genero) {
+        $this->idproduto = $idproduto;
         $this->pnome = $pnome;
         $this->snome = $snome;
         $this->email = $email;
@@ -19,7 +19,7 @@ class clientemodel {
 
     // Getters
     public function getId() {
-        return $this->idcliente;
+        return $this->idproduto;
     }
 
     public function getPnome() {
@@ -43,8 +43,8 @@ class clientemodel {
     }
 
     // Setters
-    public function setId($idcliente) {
-        $this->idcliente = $idcliente;
+    public function setId($idproduto) {
+        $this->idproduto = $idproduto;
     }
 
     public function setPnome($pnome) {
@@ -67,37 +67,37 @@ class clientemodel {
         $this->genero = $genero;
     }
 
-    public function cadastrarcliente(clienteModel $cliente)
+    public function cadastrarproduto(produtoModel $produto)
 {
-    include_once '../dao/clienteDAO.php';
-    $cliente = new clienteDAO();
-    return $cliente->cadastracliente($this);
+    include_once '../dao/produtoDAO.php';
+    $produto = new produtoDAO();
+    return $produto->cadastraproduto($this);
 }
 
-public function listarclientes()
+public function listarprodutos()
 {
-    include '../dao/clienteDAO.php';
-    $dao = new clienteDAO(null);
-    return $dao->listarclientes();
+    include '../dao/produtoDAO.php';
+    $dao = new produtoDAO(null);
+    return $dao->listarprodutos();
 }
 
-public function resgatarPorID($idcliente)
+public function resgatarPorID($idproduto)
 {
-    include '../dao/clienteDAO.php';
-    $model = new clienteDAO(null);
-    return $model->resgataPorID($idcliente);
+    include '../dao/produtoDAO.php';
+    $model = new produtoDAO(null);
+    return $model->resgataPorID($idproduto);
 }
 
-        public function alterarcliente(clientemodel $clientemodel)
+        public function alterarproduto(produtomodel $produtomodel)
         {
-            include_once '../dao/clientedao.php';
-            $cliente = new clientedao();
-            $cliente->alterarcliente($this);
+            include_once '../dao/produtodao.php';
+            $produto = new produtodao();
+            $produto->alterarproduto($this);
         }
-        public function excluircliente($idcliente)
+        public function excluirproduto($idproduto)
         {
-            include_once '../dao/clientedao.php';
-            $cliente = new clientedao();
-            $cliente->excluircliente($idcliente);
+            include_once '../dao/produtodao.php';
+            $produto = new produtodao();
+            $produto->excluirproduto($idproduto);
         }
 }

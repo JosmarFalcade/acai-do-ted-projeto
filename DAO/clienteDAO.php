@@ -2,7 +2,7 @@
 
 class clienteDAO {
 
-    public function cadastraAluno(clientemodel $cliente){
+    public function cadastraCliente(clientemodel $cliente){
         include_once 'Conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
