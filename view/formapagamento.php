@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
@@ -14,10 +17,10 @@
         <span class="menu-toggle">☰</span>
         <div class="menu">
             <a href="../index.html">Inicio</a>
-            <a href="meusdados.html">Meus dados</a>
-            <a href="login.html">Login</a>
-            <a href="cadastro.html">Cadastrar</a>
-            <a href="produtos.html">Escolha o seu açaí</a>
+            <a href="meusdados.php">Meus dados</a>
+            <a href="login.php">Login</a>
+            <a href="cadastro.php">Cadastrar</a>
+            <a href="produtos.php">Escolha o seu açaí</a>
         </div>
         
         <!-- Barra de Pesquisa -->

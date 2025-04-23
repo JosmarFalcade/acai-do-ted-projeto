@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,10 +24,10 @@
         <span class="menu-toggle">☰</span>
         <div class="menu">
                 <a href="../index.html">Inicio</a>
-                <a href="meusdados.html">Meus dados</a>
-                <a href="login.html">Login</a>
-                <a href="cadastro.html">Cadastrar</a>
-                <a href="formapagamento.html">Pagamento</a>
+                <a href="meusdados.php">Meus dados</a>
+                <a href="login.php">Login</a>
+                <a href="cadastro.php">Cadastrar</a>
+                <a href="formapagamento.php">Pagamento</a>
         </div>
         
         <!-- Barra de Pesquisa -->
@@ -34,7 +37,6 @@
         </div>
     </div>
     </header>
-    
 
     <div class="container">
         <h1>Monte seu Açaí</h1>
@@ -118,12 +120,13 @@
             }
 
             alert("Redirecionando para o pagamento...");
-            window.location.href = "formapagamento.html";
+            window.location.href = "formapagamento.php";
         }
     </script>
 
     <script src="../script/menu.js"></script>
     <script src="../script/produtos.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 <footer>
     <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
