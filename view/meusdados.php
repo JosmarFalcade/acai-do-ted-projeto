@@ -6,6 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilo.css">
     <link rel="stylesheet" href="../estilos/geral.css">
     <link rel="stylesheet" href="../estilos/meusdados.css">
     <title>Perfil do Usuário</title>
@@ -17,8 +18,6 @@ session_start();
             <span class="menu-toggle">☰</span>
             <div class="menu">
                 <a href="../index.html">Inicio</a>
-                <a href="login.php">Login</a>
-                <a href="cadastro.php">Cadastrar</a>
                 <a href="produtos.php">Escolha o seu açaí</a>
             </div>
             
@@ -28,32 +27,24 @@ session_start();
                 <button onclick="filtrarProdutos()">🔍</button>
             </div>
         </header>
+        <br><br><br><br>
     <div class="container">
         <h2>Perfil do Usuário</h2>
         <form>
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" placeholder="Digite seu nome">
 
-            <label for="age">Idade</label>
-            <input type="number" id="age" name="age" placeholder="Digite sua idade">
-
-            <label for="gender">Sexo</label>
-            <select id="gender" name="gender">
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-            </select>
-
-            <label for="address">Endereço</label>
-            <input type="text" id="address" name="address" placeholder="Digite seu endereço">
-
-            <label for="phone">Telefone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" id="surname" name="surname" placeholder="Digite seu sobrenome">
 
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
 
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" placeholder="Digite sua senha">
+
+            <label for="password">Confirme a Senha</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirme sua senha">
 
             <button type="submit">Salvar</button>
         </form>

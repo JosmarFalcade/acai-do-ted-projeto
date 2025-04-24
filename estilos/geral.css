@@ -1,4 +1,5 @@
-img { 
+/* Impede seleção/arrasto da imagem */
+img {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -8,42 +9,58 @@ img {
     -o-user-drag: none;
 }
 
+/* Imagem no header */
+header img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-
-/* Adicione ao seu arquivo CSS */
+/* Corrigido o footer fixo ao final da página */
 html, body {
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
 }
 
-.container {
-    flex-grow: 1; /* Isso faz com que o conteúdo ocupe o máximo de espaço possível */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1;
 }
 
 footer {
     width: 100%;
-    position:absolute;
-    bottom: 0;
-    left: 0;
     background-color: rgb(111, 94, 219);
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
+    margin-top: 5px;
+    position:absolute; /* importante para posicionar a .footer-image */
 }
+
+/* Imagem dentro do footer */
 .footer-image {
     position: absolute;
-    right: 20px; /* Ajuste a distância da direita */
-    bottom: 10px; /* Ajuste a distância da parte inferior */
-    width: 100px; /* Ajuste o tamanho da imagem */
+    right: 20px;
+    bottom: 100px;
+    width: 100px;
     height: auto;
 }
+
+/* Responsividade */
 @media (max-width: 1024px) {
     .slider {
         width: 100%;
     }
-    .manual-navigation, .navigation-auto {
+
+    .manual-navigation,
+    .navigation-auto {
         width: 100%;
     }
 }
@@ -54,17 +71,21 @@ footer {
         align-items: center;
         text-align: center;
     }
+
     .menu {
         flex-direction: column;
         align-items: center;
     }
+
     .auth-buttons {
         flex-direction: column;
         align-items: center;
     }
+
     .slider {
         height: auto;
     }
+
     .slide img {
         width: 100%;
         height: auto;
@@ -76,11 +97,8 @@ footer {
         padding: 3px;
         margin-right: 20px;
     }
+
     .search-bar {
         max-width: 200px;
     }
 }
-
-
-
-

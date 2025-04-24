@@ -9,24 +9,18 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolha seu Açaí</title>
-    <link rel="stylesheet" href="../estilos/produtos.css">
     <link rel="stylesheet" href="../estilos/geral.css">
+    <link rel="stylesheet" href="../estilos/estilo.css">
+    <link rel="stylesheet" href="../estilos/produtos.css">
 </head>
 
 <body>
     <header>
-    <!-- Botão Flutuante do Carrinho -->
-    <a href="formapagamento.html" class="btn-carrinho">
-        🛒
-    </a>
-
     <div class="navbar">
         <span class="menu-toggle">☰</span>
         <div class="menu">
                 <a href="../index.html">Inicio</a>
                 <a href="meusdados.php">Meus dados</a>
-                <a href="login.php">Login</a>
-                <a href="cadastro.php">Cadastrar</a>
                 <a href="formapagamento.php">Pagamento</a>
         </div>
         
@@ -37,9 +31,9 @@ session_start();
         </div>
     </div>
     </header>
+<main>
 
     <div class="container">
-        <h1>Monte seu Açaí</h1>
 
         <h2>Escolha o tamanho do copo:</h2>
         <div class="tamanhos">
@@ -126,8 +120,9 @@ session_start();
 
     <script src="../script/menu.js"></script>
     <script src="../script/produtos.js"></script>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
+    
+    <br><br><br><br><br><br><br><br>
+</main>
 <footer>
     <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
     <p>Endereço: Rua Jubirasca, 777</p>
@@ -142,4 +137,6 @@ session_start();
         <img src="../img/Açai TED.png" alt="Logo" class="footer-image">
     </div>
 </footer>
+</body>
+
 </html>
