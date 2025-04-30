@@ -1,5 +1,12 @@
 <?php
-session_start();
+session_start();        
+require '../controller/clienteprocessa.php';
+
+        // Verifica se o formulário foi enviado
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // Executa a função de login
+            login(); // Chama a função de login e captura o erro, caso haja.
+        }
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -19,7 +26,7 @@ session_start();
         <div class="navbar">
             <span class="menu-toggle">☰</span>
             <div class="menu">
-                <a href="../index.html">Inicio</a>
+                <a href="../index.html">Início</a>
                 <a href="cadastro.php">Cadastrar</a>
             </div>
 
@@ -30,19 +37,16 @@ session_start();
             </div>
         </div>
     </header>
+    
     <div class="container">
         <div class="form-image">
             <img src="../img/Ursodologin.jpg" alt="">
         </div>
-        <?php
-        require '../controller/clienteprocessa.php';
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            login();
-        }
-        ?>
+        
         <?php if (isset($error)): ?>
             <p style="color:red;"><?php echo $error; ?></p>
         <?php endif; ?>
+
         <div class="form">
             <form action="login.php" method="POST">
                 <div class="form-header">
@@ -53,33 +57,36 @@ session_start();
                 <div class="input-group">
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="Digite seu email" required>
+                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                     </div>
                     <div class="login-button">
-                        <button><a href="produtos.php">Login</a></button>
+                        <button type="submit">Login</button>
                     </div>
                 </div>
             </form>
+            
+            <!-- Botão de Cadastro -->
             <div class="cadastro-button">
-                <h6>Ainda não possui conta, clique aqui</h6>
-                <button><a href="cadastro.php">Cadastrar</a></button>
-            </div>
+    <h6>Ainda não possui conta? <a href="cadastro.php">Clique aqui</a></h6>
+</div>
+
         </div>
     </div>
+
     <script src="../Script/menu.js"></script>
 </body>
+
 <footer>
     <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
     <p>Endereço: Rua Jubirasca, 777</p>
     <p>Telefone: 51 3598 1488</p>
     <div>
         <a href="https://instagram.com/sualoja" target="_blank" style="margin: 0 10px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-                width="30">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
         </a>
         <a href="https://wa.me/seunumerodetelefone" target="_blank" style="margin: 0 10px;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">

@@ -34,7 +34,6 @@ session_start();
 <main>
 
     <div class="container">
-
         <h2>Escolha o tamanho do copo:</h2>
         <div class="tamanhos">
             <label>
@@ -120,8 +119,8 @@ session_start();
 
     <script src="../script/menu.js"></script>
     <script src="../script/produtos.js"></script>
-    
     <br><br><br><br><br><br><br><br>
+
 </main>
 <footer>
     <p>&copy; 2025 Açaí do Ted. Todos os direitos reservados.</p>
@@ -136,6 +135,8 @@ session_start();
         </a>
         <img src="../img/Açai TED.png" alt="Logo" class="footer-image">
     </div>
+
+   
 </footer>
 </body>
 

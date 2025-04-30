@@ -1,6 +1,21 @@
 <?php
 session_start();
+require_once('../controller/clienteprocessa.php');
+
+$idCliente = $_SESSION['id_cliente'];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['excluir'])) {
+        excluirDadosCliente($idCliente); // Chama a função de exclusão
+    } else {
+        processarAtualizacaoCliente($idCliente);
+    }
+}
+
+$cliente = buscarDadosCliente($idCliente);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,45 +25,49 @@ session_start();
     <link rel="stylesheet" href="../estilos/geral.css">
     <link rel="stylesheet" href="../estilos/meusdados.css">
     <title>Perfil do Usuário</title>
-
 </head>
 <body>
     <header>
         <div class="navbar">
             <span class="menu-toggle">☰</span>
             <div class="menu">
-                <a href="../index.html">Inicio</a>
+                <a href="../index.html">Início</a>
                 <a href="produtos.php">Escolha o seu açaí</a>
             </div>
             
-            <!-- Barra de Pesquisa -->
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Pesquisar..." onkeyup="filtrarProdutos()">
                 <button onclick="filtrarProdutos()">🔍</button>
             </div>
-        </header>
-        <br><br><br><br>
+        </div>
+    </header>
+    <br><br><br><br>
+
     <div class="container">
         <h2>Perfil do Usuário</h2>
-        <form>
+        <form method="POST" action="">
             <label for="name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Digite seu nome">
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" value="<?php echo htmlspecialchars($cliente['PnomeCli']); ?>">
 
-            <label for="sobrenome">Sobrenome</label>
-            <input type="text" id="surname" name="surname" placeholder="Digite seu sobrenome">
+            <label for="surname">Sobrenome</label>
+            <input type="text" id="surname" name="surname" placeholder="Digite seu sobrenome" value="<?php echo htmlspecialchars($cliente['SnomeCli']); ?>">
 
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" value="<?php echo htmlspecialchars($cliente['EmailCli']); ?>">
 
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha">
+            <input type="password" id="password" name="password" placeholder="Digite sua nova senha">
 
-            <label for="password">Confirme a Senha</label>
-            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirme sua senha">
+            <label for="confirmpassword">Confirme a Senha</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirme sua nova senha">
 
             <button type="submit">Salvar</button>
+
+            <button type="submit" name="excluir" onclick="return confirm('Tem certeza que deseja excluir sua conta?');">Excluir</button>
+
         </form>
     </div>
+
     <script src="../script/menu.js"></script>
 </body>
 <footer>
