@@ -43,10 +43,10 @@ echo "Acompanhamentos: " . implode(", ", $acompanhamentos);
     </div>
     <div class="container">
         <h1>Formas de Pagamento</h1>
-        <form method="POST" action="produtos.php">
+        <form method="POST" action="../controller/pedidoprocessa.php">
             <input type="hidden" name="tamanho" value="<?= $_SESSION['tamanho'] ?>">
             <?php foreach ($_SESSION['acompanhamentos'] as $id): ?>
-                <input type="hidden" name="acompanhamentos[]" value="<?= $id ?>">
+                <input type="hidden" name="acompanhamento[]" value="<?= $id ?>">
             <?php endforeach; ?>
 
             <label><input type="radio" name="pagamento_id" value="1" required> Pix</label><br>
@@ -55,6 +55,7 @@ echo "Acompanhamentos: " . implode(", ", $acompanhamentos);
 
             <button type="submit">Finalizar Pedido</button>
         </form>
+
         <div id="mensagem"></div>
     </div>
 
