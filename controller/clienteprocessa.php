@@ -111,5 +111,11 @@ function excluirDadosCliente($idCliente) {
     }
 }
 
-
+function verificaLogout() {
+    if (isset($_GET['acao']) && $_GET['acao'] === 'sair') {
+        session_destroy();
+        header('Location: ../index.html');
+        exit;
+    }
+}
 ?>

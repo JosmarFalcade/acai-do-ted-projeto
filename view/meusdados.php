@@ -14,6 +14,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $cliente = buscarDadosCliente($idCliente);
 
+verificaLogout();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['tamanho']) && isset($_POST['acompanhamento'])) {
+        $_SESSION['tamanho'] = $_POST['tamanho'];
+        $_SESSION['acompanhamentos'] = $_POST['acompanhamento'];
+        header('Location: formapagamento.php');
+        exit;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +43,13 @@ $cliente = buscarDadosCliente($idCliente);
             <div class="menu">
                 <a href="../index.html">Início</a>
                 <a href="produtos.php">Escolha o seu açaí</a>
+                <form method="GET" action="produtos.php" style="display: inline;">
+                    <input type="hidden" name="acao" value="sair">
+                    <button type="submit"
+                        style="background-color: #c0392b; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                        Sair da Conta
+                    </button>
+                </form>
             </div>
             
             <div class="search-bar">

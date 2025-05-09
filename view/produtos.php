@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once '../controller/clienteprocessa.php';
+verificaLogout();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['tamanho']) && isset($_POST['acompanhamento'])) {
@@ -30,7 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="menu">
                 <a href="../index.html">Inicio</a>
                 <a href="meusdados.php">Meus dados</a>
-                <a href="formapagamento.php">Pagamento</a>
+                <form method="GET" action="produtos.php" style="display: inline;">
+                    <input type="hidden" name="acao" value="sair">
+                    <button type="submit"
+                        style="background-color: #c0392b; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                        Sair da Conta
+                    </button>
+                </form>
             </div>
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Pesquisar..." onkeyup="filtrarProdutos()">

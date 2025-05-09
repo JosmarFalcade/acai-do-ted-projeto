@@ -1,13 +1,25 @@
 <?php
 session_start();
 require '../DAO/conexao.php';
+require_once '../controller/clienteprocessa.php';
+
+verificaLogout();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['tamanho']) && isset($_POST['acompanhamento'])) {
+        $_SESSION['tamanho'] = $_POST['tamanho'];
+        $_SESSION['acompanhamentos'] = $_POST['acompanhamento'];
+        header('Location: formapagamento.php');
+        exit;
+    }
+}
 
 $tamanho = $_SESSION['tamanho'] ?? 'Não selecionado';
 $acompanhamentos = $_SESSION['acompanhamentos'] ?? [];
 
-echo "<h2>Resumo do pedido</h2>";
-echo "Tamanho: $tamanho<br>";
-echo "Acompanhamentos: " . implode(", ", $acompanhamentos);
+//echo "<h2>Resumo do pedido</h2>";
+//echo "Tamanho: $tamanho<br>";
+//echo "Acompanhamentos: " . implode(", ", $acompanhamentos);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -29,9 +41,14 @@ echo "Acompanhamentos: " . implode(", ", $acompanhamentos);
             <div class="menu">
                 <a href="../index.html">Inicio</a>
                 <a href="meusdados.php">Meus dados</a>
-                <a href="login.php">Login</a>
-                <a href="cadastro.php">Cadastrar</a>
                 <a href="produtos.php">Escolha o seu açaí</a>
+                <form method="GET" action="produtos.php" style="display: inline;">
+                    <input type="hidden" name="acao" value="sair">
+                    <button type="submit"
+                        style="background-color: #c0392b; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                        Sair da Conta
+                    </button>
+                </form>
             </div>
 
             <!-- Barra de Pesquisa -->
