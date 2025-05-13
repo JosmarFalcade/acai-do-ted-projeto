@@ -25,6 +25,7 @@ function cadastrar()
                 $stmt = $pdo->prepare("INSERT INTO cliente (PnomeCli, SnomeCli, EmailCli, SenhaCli) VALUES (?, ?, ?, ?)");
                 if ($stmt->execute([$pnome, $snome, $email, $hashed_password])) {
                     $success = 'Usuário registrado com sucesso. Você pode fazer login agora.';
+                    header('Location: ../view/login.php');
                 } else {
                     $error = 'Erro ao registrar o usuário. Tente novamente.';
                 }

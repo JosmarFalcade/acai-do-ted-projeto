@@ -39,7 +39,6 @@ $acompanhamentos = $_SESSION['acompanhamentos'] ?? [];
         <div class="navbar">
             <span class="menu-toggle">☰</span>
             <div class="menu">
-                <a href="../index.html">Inicio</a>
                 <a href="meusdados.php">Meus dados</a>
                 <a href="produtos.php">Escolha o seu açaí</a>
                 <form method="GET" action="produtos.php" style="display: inline;">

@@ -1,7 +1,17 @@
 <?php
 session_start();
 require_once '../controller/clienteprocessa.php';
+require_once '../DAO/conexaoDAO.php';
 verificaLogout();
+
+$tamanhos = [];
+$stmt = $pdo->query("SELECT idtamanho, nome, volume_ml, caminho FROM tamanho");
+$tamanhos = $stmt->fetchAll();
+
+// Carregar Acompanhamentos
+$acompanhamentos = [];
+$stmt = $pdo->query("SELECT idacompanhamento, nomeacompanhamento, caminho FROM acompanhamento");
+$acompanhamentos = $stmt->fetchAll();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['tamanho']) && isset($_POST['acompanhamento'])) {
@@ -30,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="navbar">
             <span class="menu-toggle">☰</span>
             <div class="menu">
-                <a href="../index.html">Inicio</a>
                 <a href="meusdados.php">Meus dados</a>
                 <form method="GET" action="produtos.php" style="display: inline;">
                     <input type="hidden" name="acao" value="sair">
@@ -52,57 +61,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="container">
                 <h2>Escolha o tamanho do copo:</h2>
                 <div class="tamanhos">
-                    <label>
-                        <img src="../img/copopequeno.png" alt="Pequeno" class="opcao-img">
-                        <input type="radio" name="tamanho" value="1"> Pequeno (300ml)
-                    </label>
-                    <label>
-                        <img src="../img/copomedio.png" alt="Médio" class="opcao-img">
-                        <input type="radio" name="tamanho" value="2"> Médio (500ml)
-                    </label>
-                    <label>
-                        <img src="../img/copogrande.png" alt="Grande" class="opcao-img">
-                        <input type="radio" name="tamanho" value="3"> Grande (700ml)
-                    </label>
+                    <?php foreach ($tamanhos as $t): ?>
+                        <label>
+                            <img src="../<?= htmlspecialchars($t['caminho']) ?>" alt="<?= htmlspecialchars($t['nome']) ?>"
+                                class="opcao-img">
+                            <input type="radio" name="tamanho" value="<?= $t['idtamanho'] ?>">
+                            <?= htmlspecialchars($t['nome']) ?> (<?= htmlspecialchars($t['volume_ml']) ?> ml)
+                        </label>
+                    <?php endforeach; ?>
                 </div>
-
                 <h2>Escolha seus acompanhamentos:</h2>
                 <div class="acompanhamentos">
-                    <label><img src="../img/granola.png" alt="Granola" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="1"> Granola
-                    </label>
-                    <label><img src="../img/banana.png" alt="Banana" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="2"> Banana
-                    </label>
-                    <label><img src="../img/morangos.png" alt="Morangos" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="3"> Morangos
-                    </label>
-                    <label><img src="../img/leite_condensado.png" alt="Leite Condensado" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="4"> Leite Condensado
-                    </label>
-                    <label><img src="../img/mel.png" alt="Mel" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="5"> Mel
-                    </label>
-                    <label><img src="../img/paçoca.png" alt="Paçoca" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="6"> Paçoca
-                    </label>
-                    <label><img src="../img/chocolate.png" alt="Chocolate" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="7"> Chocolate
-                    </label>
-                    <label><img src="../img/nutella.png" alt="Nutella" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="8"> Nutella
-                    </label>
-                    <label><img src="../img/coco_ralado.png" alt="Coco Ralado" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="9"> Coco Ralado
-                    </label>
-                    <label><img src="../img/castanha.png" alt="Castanha" class="opcao-img">
-                        <input type="checkbox" name="acompanhamento[]" value="10"> Castanha
-                    </label>
+                    <?php foreach ($acompanhamentos as $a): ?>
+                        <label>
+                            <img src="../<?= htmlspecialchars($a['caminho']) ?>"
+                                alt="<?= htmlspecialchars($a['nomeacompanhamento']) ?>" class="opcao-img">
+                            <input type="checkbox" name="acompanhamento[]" value="<?= $a['idacompanhamento'] ?>">
+                            <?= htmlspecialchars($a['nomeacompanhamento']) ?>
+                        </label>
+                    <?php endforeach; ?>
                 </div>
-
                 <button type="submit" name="submit">Ir para o Pagamento</button>
-                <br><br><br><br><br><br><br><br><br><br>
             </div>
+            <br><br><br><br><br><br><br><br>
         </form>
 
         <script>
